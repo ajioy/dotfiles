@@ -1,0 +1,24 @@
+XTerm*termName: xterm-color
+xterm*font: -misc-fixed-bold-r-normal--15-140-75-75-c-90-iso8859-15
+XTerm*wideFont: -misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1
+xterm*utf8Title: true
+XTerm*locale: zh_CN.UTF-8
+
+xterm.geometry: 80x36
+xterm*background: black
+xterm*foreground: gray
+xterm*loginShell: true
+xterm*scrollBar: true
+xterm*cursorBlink: false
+xterm*rightScrollBar: true
+xterm*title: XTerm
+xterm*iconName: XTerm
+xterm*saveLines: 50000
+xterm*jumpScroll: true
+xterm*scrollTtyOutput: false
+xterm*scrollKey: true
+xterm*alwaysUseMods: true
+xterm*metaSendsEscape: true
+xterm*colorUL: yellow
+xterm*colorBD: white
+XTerm.colorBDMode: true
