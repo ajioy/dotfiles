@@ -129,7 +129,7 @@ alias ll='dirr -al'
 # xterm
 alias xterm="xterm -fn -misc-fixed-bold-r-normal--15------iso8859-15 -fg gray -bg black"
 alias xterm30="xterm -fn -misc-fixed-bold-r-normal--30------iso8859-15 -fg gray -bg black"
-
+alias xtermb="xterm -fn -misc-fixed-bold-r-*-*-30-280-75-75-*-*-iso10646-1 -fg gray -bg black"
 # tmux
 alias tmux='tmux -2'
 
