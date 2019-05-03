@@ -130,8 +130,20 @@ alias ll='dirr -al'
 alias xterm="xterm -fn -misc-fixed-bold-r-normal--15------iso8859-15 -fg gray -bg black"
 alias xterm30="xterm -fn -misc-fixed-bold-r-normal--30------iso8859-15 -fg gray -bg black"
 alias xtermb="xterm -fn -misc-fixed-bold-r-*-*-30-280-75-75-*-*-iso10646-1 -fg gray -bg black"
+
 # tmux
 alias tmux='tmux -2'
+
+# system
+alias vi='vim'
+alias svim='sudo vim'
+alias install='sudo apt-get install'
+alias remove='sudo apt-get remove'
+alias update='sudo apt-get update; sudo apt-get upgrade'
+alias ..="cd .."
+alias ...="cd ..; cd .."
+alias mkcd=mkcd
+mkcd(){ mkdir -p "$1"; cd "$1"; }
 
 # shared history between different sessions, such as bash\tmux pane etc.
 USER_IP=`who -u am i 2>/dev/null| awk '{print $NF}'|sed -e 's/[()]//g'` 
@@ -151,7 +163,6 @@ shopt -s histappend
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 
-alias vi='vim'
 
 # custom rm command, can recovery
 alias rm=trash
@@ -181,12 +192,21 @@ cleartrash()
     [ $confirm == 'y' ] || [ $confirm == 'Y' ] && /bin/rm -rf ~/.trash/*
 }
 
-# python virtualenvwrapper config
+## python virtualenvwrapper config
 # if [ `id -u` != '0' ]; then
     # #export VIRTUALENV_USE_DISTRIBUTE=1        # <-- Always use pip/distribute
-    # export WORKON_HOME=$HOME/.virtualenvs       # <-- Where all virtualenvs will be stored
+    # export WORKON_HOME=$HOME/.virtualenvs       # <-- Where all virtualenvs will b#
     # export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
     # source /usr/local/python3/bin/virtualenvwrapper.sh
     # #export PIP_VIRTUALENV_BASE=$WORKON_HOME
     # #export PIP_RESPECT_VIRTUALENV=true
 # fi
+
+## pyenv config
+## Load pyenv automatically by adding
+# export PATH="/home/ajioy/.pyenv/bin:$PATH"
+# export PATH=$HOME/.pyenv/bin:$PATH
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
+
+

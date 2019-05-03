@@ -23,11 +23,13 @@
 - [x] **tmux**：终端复用神器，同时开多个终端
 
 ### **Support**
-- [x] 渐变式的prompt
+- [x] 颜色渐变式的prompt
 - [x] bash与tmux pane共享命令历史记录
+- [x] 高频命令alias
 - [x] xterm及-misc-fixed字体
 - [x] 安全版的rm，删除后可恢复
 - [x] python virtualenvwrapper配置
+- [x] pyenv配置
 
 ### **Shortcuts**
 #### - **fzf**
@@ -116,6 +118,10 @@ s           选择并切换会话
 Ctrl+z      挂起当前会话
 pageup      向上滚屏
 pagedown    向下滚屏
+
+刷新配置使之生效
+prefix :source-file ~/.tmux.conf
+prefix+R(自定义快捷键)
 ```
 
 ##### **2.会话Session**
