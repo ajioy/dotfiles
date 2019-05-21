@@ -8,16 +8,7 @@ case $- in
       *) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
 
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -47,12 +38,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
     else
-	color_prompt=
+    color_prompt=
     fi
 fi
 
@@ -118,8 +109,10 @@ fi
 export PS1="\[\033[00;38;5;100m\]\u\[\033[00;38;5;101m\]@\[\033[00;38;5;106m\]\h\[\033[00;38;5;106m\]:\[\033[00;38;5;70m\]\w\[\033[00;38;5;72m\]$ \[\033[00;38;5;253m\]"
 
 # language
-export LC_CTYPE=zh_CN.UTF-8
-export LC_LANG=en_US.UTF-8
+#export LC_CTYPE=zh_CN.UTF-8
+#export LC_LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # dirr custom ls tool
 export PATH="$HOME/.bin:$PATH"
@@ -148,8 +141,14 @@ mkcd(){ mkdir -p "$1"; cd "$1"; }
 # shared history between different sessions, such as bash\tmux pane etc.
 USER_IP=`who -u am i 2>/dev/null| awk '{print $NF}'|sed -e 's/[()]//g'` 
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S  `whoami`@${USER_IP}: "
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+export HISTSIZE=1000000
 export HISTFILESIZE=1000000
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+# append to the history file, don't overwrite it
 shopt -s histappend
 
 
@@ -204,7 +203,6 @@ cleartrash()
 
 ## pyenv config
 ## Load pyenv automatically by adding
-# export PATH="/home/ajioy/.pyenv/bin:$PATH"
 # export PATH=$HOME/.pyenv/bin:$PATH
 # eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
