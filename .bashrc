@@ -151,17 +151,8 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-
-
-# autojump: j foo
-[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
-
-
-# fzf replace ctrl+r
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
-export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
-
+# enable ctrl+s back default:ctrl+r next
+stty -ixon 
 
 # custom rm command, can recovery
 # not work well, deprecated!!!
@@ -192,6 +183,15 @@ export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat 
     # [ $confirm == 'y' ] || [ $confirm == 'Y' ] && /bin/rm -rf ~/.trash/*
 # }
 
+## ------------third party apps config-----------------
+# autojump: j foo
+[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
+
+
+# fzf replace ctrl+r
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 ## python virtualenvwrapper config
 # if [ `id -u` != '0' ]; then
     # #export VIRTUALENV_USE_DISTRIBUTE=1        # <-- Always use pip/distribute
