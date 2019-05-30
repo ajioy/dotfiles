@@ -7,7 +7,15 @@
 
 ------------------------
 # 说明
-> Updated: 2019/03/08
+> Updated: 2019/05/30
+## (0).install
+```
+git clone https://github.com/ajioy/dotfiles.git
+cd dotfiles
+chmod u+x install.sh
+./install.sh
+```
+
 ## (1).bashrc
 ### **Screenshot**
 - **dirr**
@@ -21,6 +29,7 @@
 - [x] **autojump**：j path，可快速跳至已经cd过的目录
 - [x] **fzf**：历史命令模糊搜索，查看当前目录下的所有目录及文件名，可预览文件内容
 - [x] **tmux**：终端复用神器，同时开多个终端
+- [x] tldr：列出命令常用语法，比man更友好 自行安装pip install tldr
 
 ### **Support**
 - [x] 颜色渐变式的prompt

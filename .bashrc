@@ -79,9 +79,9 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -164,39 +164,41 @@ export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat 
 
 
 # custom rm command, can recovery
-alias rm=trash
-alias r=trash
-alias rl='ls ~/.trash'
-alias ur=undelfile
+# not work well, deprecated!!!
+# alias rm=trash
+# alias r=trash
+# alias rl='ls ~/.trash'
+# alias ur=undelfile
 
-undelfile()
-{
-  mv -i ~/.trash/$@ ./
-}
+# undelfile()
+# {
+  # mv -i ~/.trash/$@ ./
+# }
 
-trash()
-{
-  if [ -d ~/.trash/$@ ]; then
-        /bin/rm -rf ~/.trash/$@
-  fi
-  if [ -f ~/.trash/$@ ]; then
-        /bin/rm -f ~/.trash/$@
-  fi
-  mv -f $@ ~/.trash/$@
-}
+# trash()
+# {
+  # if [ -d ~/.trash/$@ ]; then
+        # /bin/rm -rf ~/.trash/$@
+  # fi
+  # if [ -f ~/.trash/$@ ]; then
+        # /bin/rm -f ~/.trash/$@
+  # fi
+  # mv -f $@ ~/.trash/$@
+# }
 
-cleartrash()
-{
-    read -p "clear sure?[n]" confirm
-    [ $confirm == 'y' ] || [ $confirm == 'Y' ] && /bin/rm -rf ~/.trash/*
-}
+# cleartrash()
+# {
+    # read -p "clear sure?[n]" confirm
+    # [ $confirm == 'y' ] || [ $confirm == 'Y' ] && /bin/rm -rf ~/.trash/*
+# }
 
 ## python virtualenvwrapper config
 # if [ `id -u` != '0' ]; then
     # #export VIRTUALENV_USE_DISTRIBUTE=1        # <-- Always use pip/distribute
     # export WORKON_HOME=$HOME/.virtualenvs       # <-- Where all virtualenvs will b#
     # export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-    # source /usr/local/python3/bin/virtualenvwrapper.sh
+    ## source /usr/local/python3/bin/virtualenvwrapper.sh
+    # source /usr/local/bin/virtualenvwrapper.sh
     # #export PIP_VIRTUALENV_BASE=$WORKON_HOME
     # #export PIP_RESPECT_VIRTUALENV=true
 # fi
