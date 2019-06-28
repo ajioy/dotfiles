@@ -185,7 +185,13 @@ stty -ixon
 
 ## ------------third party apps config-----------------
 # autojump: j foo
-[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
+# [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
+
+# z.lua a better cd command than autojump
+export _ZL_ECHO=1 # z.lua print the new directory after cd
+# eval "$(lua /path/to/z.lua --init bash enhanced once)"
+eval "$(lua $HOME/enhancetools/z.lua/z.lua --init bash enhanced once fzf)" # tab enable fzf
+
 
 
 # fzf replace ctrl+r

@@ -33,8 +33,11 @@ source $HOME/.bashrc # it seems doesn't work
 echo "Step3: install tmux"
 apt-get install tmux -y
 
-echo "Step4: install autojump"
-git clone git://github.com/wting/autojump.git && $CURRENT_DIR/install.py
+# echo "Step4: install autojump"
+# git clone git://github.com/wting/autojump.git && $CURRENT_DIR/install.py
+
+echo "Step4: install z.lua"
+git clone git://github.com/skywind3000/z.lua.git
 
 echo "Step5: install fzf"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
