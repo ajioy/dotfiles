@@ -7,7 +7,7 @@
 
 ------------------------
 # 说明
-> Updated: 2019/05/30
+> Updated: 2019/06/28
 ## (0).install
 ```
 git clone https://github.com/ajioy/dotfiles.git
@@ -20,16 +20,17 @@ chmod u+x install.sh
 ### **Screenshot**
 - **dirr**
 ![tmuximg](https://raw.githubusercontent.com/ajioy/storage/master/dirr.png)
-- **autojump**
+- **autojump**(z.lua与其类似，将j改为z即可，懒得换图了)
 ![tmuximg](https://raw.githubusercontent.com/ajioy/storage/master/autojump.png)
 - **fzf**
 ![tmuximg](https://raw.githubusercontent.com/ajioy/storage/master/fzf.png)
 ### **Plugins**
 - [x] **dirr**：一款增强版的ls，配色丰富，可统计目录及文件个数，
-- [x] **autojump**：j path，可快速跳至已经cd过的目录
+- [x] ~~**autojump**：j path，可快速跳至已经cd过的目录~~
+- [x] **z.lua**：z path，可快速跳至已经cd过的目录（比autojump更高效，无需安装）
 - [x] **fzf**：历史命令模糊搜索，查看当前目录下的所有目录及文件名，可预览文件内容
 - [x] **tmux**：终端复用神器，同时开多个终端
-- [x] tldr：列出命令常用语法，比man更友好 自行安装pip install tldr
+- [x] **tldr**：列出命令常用语法，比man更友好 自行安装pip install tldr
 
 ### **Support**
 - [x] 颜色渐变式的prompt
